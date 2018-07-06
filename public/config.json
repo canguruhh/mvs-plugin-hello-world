@@ -1,0 +1,18 @@
+{
+    "name": "hello-world",
+    "author": "Sven Mutzl",
+    "description": "Greetings for all your Avatars.",
+    "url": "https://hello-world.blocktrack.net",
+    "config": {
+        "permissions": ["avatars", "create-mit", "broadcast"]
+    },
+    "translation": {
+        "default": {
+            "name": "Hello World"
+        },
+        "de": {
+            "name": "Hallo Welt",
+            "description": "Grüße an deine Avatare."
+        }
+    }
+}

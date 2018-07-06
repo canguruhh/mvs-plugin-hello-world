@@ -1,0 +1,22 @@
+<script src="https://api.myetpwallet.com/lightwallet.js"></script>
+<div id="message"></div>
+<div id="avatars"></div>
+<script>
+    let lightwallet = new Lightwallet();
+    lightwallet.getAvatars()
+        .then(avatars => {
+            if (avatars.length) {
+                avatars.forEach(avatar => {
+                    var item = document.createElement("H2")
+                    item.innerHTML = "Hello " + avatar.symbol
+                    document.getElementById('avatars').append(item);
+                });
+            } else {
+                document.getElementById('avatars').innerHTML = "You don't have any avatar I could say hello to.";
+            }
+        })
+        .catch(error => {
+            document.getElementById('message').innerHTML = "Insufficient permissions";
+
+        })
+</script>
